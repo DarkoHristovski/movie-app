@@ -22,8 +22,6 @@ function App() {
       .catch(console.error);
   }, []);
 
-  //let url = https://cdn.contentful.com/spaces/${SPACE_ID}/environments/${ENVIROMENT_ID}/entries?access_token=${ACCESS_TOKEN}
-
   return (
     <>
       <ul>
