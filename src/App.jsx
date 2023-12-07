@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
-//const contentful = require('contentful');
+
 import { createClient } from "contentful";
 function App() {
   const [movies, setMovies] = useState([]);
@@ -24,17 +27,9 @@ function App() {
 
   return (
     <>
-      <ul>
-        {movies.map((x) => (
-          <li key={x.fields.title}>
-            <div>
-              <img src={x.fields.image.fields.file.url} alt="" />
-
-              <p>{x.fields.title}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <Header />
+      <Main />
+      <Footer />
     </>
   );
 }
