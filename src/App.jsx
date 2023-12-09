@@ -12,7 +12,6 @@ function App() {
   const SPACE_ID = "srxdrtp8asux";
   const ACCESS_TOKEN = "OAN2Iy_jUvtzP_OmX3_kfbpIT02AG5adBg1yVVuCSgk";
   const ENVIROMENT_NAME = "master";
-
   const client = createClient({
     space: SPACE_ID,
     environment: ENVIROMENT_NAME, // defaults to 'master' if not set
@@ -28,7 +27,7 @@ function App() {
   return (
     <>
       <Header />
-      <Main />
+      <Main movies={movies} />
       <Footer />
     </>
   );
