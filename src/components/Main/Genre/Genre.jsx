@@ -1,24 +1,19 @@
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 const Genre = ({ movies }) => {
-  const [genreList, setGenreList] = useState([]);
-  const { genre } = useParams();
+  const [genreList, setGenreList] = useState(['Action', 'Adventure', 'Drama', 'Crime', 'Fantasy', 'Sci-Fi', 'Mystery']);
 
   return (
     <div className="all-movie-wrapper">
-      {movies.map((x) => {
-        {
-          let newGenreArr = [...x.fields.genre].toString();
-
-          console.log(newGenreArr);
-        }
+      {
+      genreList.map((genre) => {
         return (
           <Link
-            key={x.sys.id}
-            to={`/genre/${[...x.fields.genre].toString()}`}
+            key={genre}
+            to={`/genre/${genre}`}
             className="genre-div movie-card"
           >
-            <p>{[...x.fields.genre]}</p>
+            <p>{genre}</p>
           </Link>
         );
       })}
