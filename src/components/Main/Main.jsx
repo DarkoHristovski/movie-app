@@ -14,7 +14,7 @@ const Main = ({ movies }) => {
         <Route path="/" element={<Home movies={movies} />} />
         <Route path="/movies" element={<Movies movies={movies} />} />
         <Route path="/movies/:id" element={<MovieDetails />} />
-        <Route path="/genre/:name" element={<GenreFilter />} />
+        <Route path="/genre/:genre" element={<GenreFilter />} />
       </Routes>
     </main>
   );

@@ -1,10 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { createClient } from "contentful";
+import Loader from "../../Loader/Loader";
 
 const GenreFilter = () => {
   const [movies, setMovies] = useState([]);
-  const { name: genres } = useParams();
+  const { genre } = useParams();
 
   const SPACE_ID = "srxdrtp8asux";
   const ACCESS_TOKEN = "OAN2Iy_jUvtzP_OmX3_kfbpIT02AG5adBg1yVVuCSgk";
@@ -19,20 +20,27 @@ const GenreFilter = () => {
       .getEntries()
       .then((response) => {
         const moviesList = response.items;
-        const filteredMoviesList = moviesList.filter((item) => item.fields.genre.includes(genres));
+        const filteredMoviesList = moviesList.filter((item) => item.fields.genre.includes(genre));
         setMovies(filteredMoviesList)
       })
       .catch(console.error);
   }, []);
 
   return (
-  <div className="all-movie-wrapper">
+     <> 
+{ 
+  movies.length > 0 ? (<section className="movie-wrapper">
+    <p>{genre}</p>
+    <div className="flex-container"> 
     {movies.map((x) => (
       <Link to={`/movies/${x.sys.id}`} className="movie-card" key={x.sys.id}>
         <img src={x.fields.image.fields.file.url} alt="" />
       </Link>
     ))}
   </div>
+  </section>):(<Loader/>)}
+
+  </>
   )
 };
 

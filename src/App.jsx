@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
+import Loader from "./components/Loader/Loader";
 import "./App.css";
 
 import { createClient } from "contentful";
@@ -26,10 +27,14 @@ function App() {
 
   return (
     <>
+   { 
+   movies.length > 0 ? (<div className="page-wrapper">
       <Header />
       <Main movies={movies} />
       <Footer />
+    </div>): (<Loader/>)}
     </>
+    
   );
 }
 
