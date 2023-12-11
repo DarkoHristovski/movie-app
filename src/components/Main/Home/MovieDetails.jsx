@@ -1,8 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
+import Loader from "../../Loader/Loader";
 const MovieDetails = () => {
-  const [movieDetails, setMovieDetails] = useState([]);
+  const [movieDetails, setMovieDetails] = useState(null);
   const { id } = useParams();
   const client = createClient({
     space: "srxdrtp8asux",
@@ -17,10 +18,12 @@ const MovieDetails = () => {
   }, []);
   console.log(movieDetails);
   return (
-    <section className="movie-details">
+    <>
+   { movieDetails ? ( <section className="movie-details">
       <img src={movieDetails?.fields?.image.fields.file.url} alt="" />
       <h2>{movieDetails?.fields?.title}</h2>
-    </section>
+    </section>) : (<Loader/>)}
+    </>
   );
 };
 
