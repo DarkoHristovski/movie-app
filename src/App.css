@@ -96,7 +96,6 @@ ul li img {
   bottom: 0;
   display: block;
   border-radius: 6px;
-
 }
 
 
@@ -141,3 +140,42 @@ ul li img {
 }
 
 
+.slick-slide > div {
+  margin: 0 5px;
+  height: 100%;
+}
+
+.slick-slide .movie-card{
+  display: block;
+  height: 100%;
+}
+
+.slick-track
+{
+    display: flex !important;
+}
+
+.slick-slide
+{
+    height: inherit !important;
+}
+
+
+.movie-wrapper .slick-prev,
+.movie-wrapper .slick-next{
+  top: -10px;
+  right: 0;
+  margin-bottom: 20px;
+  border: none;
+  padding: 3px;
+}
+
+.movie-wrapper .slick-prev{
+  left: auto;
+  right: 30px
+
+}
+
+.movie-wrapper .slick-prev:before, .slick-next:before{
+color: black;
+}
