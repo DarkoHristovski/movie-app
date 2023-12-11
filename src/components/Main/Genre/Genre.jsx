@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../Genre/genre.css"
 const Genre = ({ movies }) => {
-  const [genreList, setGenreList] = useState(['Action', 'Adventure', 'Drama', 'Crime', 'Commedy', 'Fantasy', 'Sci-Fi', 'Mystery']);
+  const [genreList, setGenreList] = useState(['Action', 'Adventure', 'Drama', 'Crime', 'Comedy', 'Fantasy', 'Sci-Fi', 'Mystery']);
 
   return (
     <section className="movie-wrapper">
