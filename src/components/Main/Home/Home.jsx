@@ -1,7 +1,7 @@
 import Genre from "../../Main/Genre/Genre"
 import  LatestMovies from "../LatestMovies";
 import PopularMovies from "./PopularMovie";
-import TopSection from "../TopSection"
+import TopSection from "./TopSection/TopSection"
 
 const Home = ({movies}) =>{
     return (
