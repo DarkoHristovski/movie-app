@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 const LatestMovies = ({movies}) =>{
 
     const latestMovies = movies.slice(0, 4);
