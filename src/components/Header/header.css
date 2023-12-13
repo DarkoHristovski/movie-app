@@ -6,7 +6,7 @@
 
 .header_wrapper {
   height: 66px;
-  background-color: #1C0D30;
+  background-color: #1c0d30;
   border-bottom: 2px solid black;
   display: flex;
   color: white;
@@ -35,17 +35,23 @@
 
 .header_wrapper a:hover {
   text-decoration: none;
-  color: #D187FF;
+  color: #d187ff;
 }
 
 .navLinks {
-  display: flex;
-  gap: 25px;
-  font-size: 20px;
-  padding-right: 15px;
-  align-items: center;
+  display: none;
 }
 
 .logo p {
   margin: 0;
+}
+
+@media screen and (min-width: 626px) {
+  .navLinks {
+    display: flex;
+    gap: 25px;
+    font-size: 20px;
+    padding-right: 15px;
+    align-items: center;
+  }
 }
