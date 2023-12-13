@@ -2,8 +2,17 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../Genre/genre.css"
 const Genre = ({ movies }) => {
-  const [genreList, setGenreList] = useState(['Action', 'Adventure', 'Drama', 'Crime', 'Comedy', 'Fantasy', 'Sci-Fi', 'Mystery']);
+  let newArr = movies.map(x=> [...x.fields.genre]).toString().split(',');
+let uniqeArr= []
+  for(let i = 0; i < newArr.length; i++){
+if(!uniqeArr.includes(newArr[i])){
+  uniqeArr.push(newArr[i])
+}
+  }
+  const [genreList, setGenreList] = useState(uniqeArr);
 
+  
+  
   return (
     <section className="movie-wrapper">
        <div className="movie-wrapper-title">
