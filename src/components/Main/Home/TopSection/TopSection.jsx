@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
 import "./TopSectionStyle.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const TopSection = ({ movies }) => {
   const latestMovies = movies.slice().sort((itemA, itemB) => {
@@ -18,7 +19,9 @@ const TopSection = ({ movies }) => {
             <Carousel.Item key={item.fields.title}>
               <div
                 className="carouselItem"
-                style={{ backgroundImage: `url(${item?.fields?.trailerImg?.fields?.file.url})` }}
+                style={{
+                  backgroundImage: `url(${item?.fields?.trailerImg?.fields?.file.url})`,
+                }}
               >
                 <div className="carouselText">
                   <h2 className="carTitle">{item.fields.title}</h2>
@@ -34,6 +37,7 @@ const TopSection = ({ movies }) => {
                     </a>
                   </div>
                   <p className="carDescript">{item.fields.description} </p>
+                  <Link to={`/movies/${item.sys.id}`}>See more details</Link>
                 </div>
               </div>
             </Carousel.Item>

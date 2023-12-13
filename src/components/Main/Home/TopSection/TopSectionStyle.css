@@ -26,12 +26,13 @@
   background-repeat: no-repeat;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: end;
 }
 
 .carTitle {
   color: white;
   font-size: 3rem;
+  
 }
 
 .carouselText{
@@ -39,14 +40,34 @@
   flex-direction: column;
   padding: 2.6rem;
   color: white;
+  
 }
 
 .carDescript{
   display: none;
+  backdrop-filter: blur(8px);
+  margin: 5px 0 0 0;
 }
 
 .carouselItem a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #d187ff;
+  color: #2a0a3e;
+  background-color: aliceblue;
+  padding: 5px;
+}
+
+.carousel-control-next {
+  display: none;
+}
+
+.carousel-control-prev {
+  display: none;
+}
+
+@media screen and (min-width: 626px) {
+  .carDescript{
+  display: block;
+  max-width: 50vw;
+}
 }
