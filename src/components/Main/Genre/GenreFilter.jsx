@@ -4,13 +4,13 @@ import { createClient } from "contentful";
 import Loader from "../../Loader/Loader";
 
 const GenreFilter = () => {
-  const [movies, setMovies] = useState([]);
-  const { genre } = useParams();
+const [movies, setMovies] = useState([]);
+const { genre } = useParams();
 
-  const SPACE_ID = "srxdrtp8asux";
-  const ACCESS_TOKEN = "OAN2Iy_jUvtzP_OmX3_kfbpIT02AG5adBg1yVVuCSgk";
-  const ENVIROMENT_NAME = "master";
-  const client = createClient({
+const SPACE_ID = "srxdrtp8asux";
+const ACCESS_TOKEN = "OAN2Iy_jUvtzP_OmX3_kfbpIT02AG5adBg1yVVuCSgk";
+const ENVIROMENT_NAME = "master";
+const client = createClient({
     space: SPACE_ID,
     environment: ENVIROMENT_NAME, // defaults to 'master' if not set
     accessToken: ACCESS_TOKEN,
