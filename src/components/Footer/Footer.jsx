@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
-import "./Footer.css"
+import "./Footer.css";
 import tvLogo from "../../icon/tv.png";
+import facebookLogo from "../../icon/facebook.png";
+import instagremLogo from "../../icon/instagram.png";
+import twitter from "../../icon/twitter.png";
 
 const Footer = () => {
   return (
@@ -15,7 +18,13 @@ const Footer = () => {
             <img src={tvLogo} alt="logo" style={{ width: "50px" }} />
           </Link>
           <div className="contacts">
-            
+            <img src={facebookLogo} alt="facebookLogo" className="socialIcon" />
+            <img
+              src={instagremLogo}
+              alt="instagremLogo"
+              className="socialIcon"
+            />
+            <img src={twitter} alt="twitter" className="socialIcon" />
           </div>
         </div>
 
@@ -23,9 +32,10 @@ const Footer = () => {
           <p>
             Made by :
             <a href="https://github.com/DarkoHristovski"> Darko Hristovski</a> /
-            <a href="https://github.com/AnnaHovzan">AnnaHovzan</a> /{" "}
-            <a href="https://github.com/adichats92">Aadil</a>
+            <a href="https://github.com/AnnaHovzan"> AnnaHovzan</a> /
+            <a href="https://github.com/adichats92"> Aadil</a>
           </p>
+          <p>2023 All right reserved</p>
         </div>
       </div>
     </>
