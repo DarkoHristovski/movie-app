@@ -1,0 +1,36 @@
+.FooterWraper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  gap: 5px;
+  text-align: center;
+}
+
+.item1 {
+  display: flex;
+  justify-items: space-between;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item2 a{
+  text-decoration: none;
+  color: #2a0a3e;
+}
+
+.item2 a:hover{
+  text-decoration: none;
+  color: #7a4899;
+}
+
+
+.socialIcon {
+  width: 40px;
+  padding: 5px;
+  cursor: pointer;
+}
