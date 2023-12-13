@@ -19,3 +19,13 @@
   margin: 0;
 }
 
+.link a{
+  text-decoration: none;
+  color: #2a0a3e;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.link a:hover {
+  color: #7a4899;
+}
