@@ -71,7 +71,7 @@ main {
 }
 
 .movie-wrapper .movie-wrapper-title h2 {
-	color: blanchedalmond;
+	color: papayawhip;
 }
 
 .movie-wrapper .movie-wrapper-title p {
@@ -113,7 +113,7 @@ main {
 .movie-wrapper .movie-card .movie-title {
 	position: absolute;
 	left: 1rem;
-	color: #fff;
+	color: blanchedalmond;
 	font-size: 24px;
 	font-weight: 500;
 	z-index: 8;
@@ -130,22 +130,23 @@ main {
 
 .movie-details {
 	display: flex;
-	width: 99%;
+	height: 90vh;
 	margin: auto;
 	justify-content: center;
 	align-items: center;
-	margin-top: 30px;
 }
 
 .movie-details-title {
 	margin-bottom: 20px;
 	font-size: 30px;
+	color: papayawhip;
 }
 
 .movie-details p {
 	margin-bottom: 10px;
 	font-size: 20px;
 	line-height: 1.3;
+	color: lightcyan;
 }
 
 .movie-details li {
@@ -163,7 +164,7 @@ main {
 }
 
 .movie-details-image {
-	width: 50%;
+	width: 45%;
 	display: flex;
 	justify-content: end;
 }
@@ -229,7 +230,6 @@ main {
 		position: absolute;
 		left: 0.3rem;
 		text-align: center;
-		color: #fff;
 		font-size: 1rem;
 		font-weight: 400;
 		z-index: 8;
@@ -244,10 +244,9 @@ main {
 		bottom: 0.1rem;
 	}
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 	.movie-wrapper .movie-card {
-		width: 40%;
-		height: auto;
+		width: 35%;
 		position: relative;
 		margin: 1rem;
 		overflow: hidden;
@@ -257,7 +256,6 @@ main {
 	.movie-wrapper .movie-card .movie-title {
 		position: absolute;
 		left: 0.1rem;
-		color: #fff;
 		font-size: 0.6rem;
 		font-weight: 300;
 		z-index: 8;
