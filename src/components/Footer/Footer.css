@@ -11,8 +11,9 @@
 
 .item1 {
   display: flex;
-  justify-items: space-between;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 10px;
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
