@@ -1,6 +1,3 @@
-.movie-wrapper {
-	background-image: linear-gradient(to right, #000000, #2a0a3e);
-}
 .movie-wrapper .movie-card.genre-card {
 	height: 16rem;
 	display: flex;
