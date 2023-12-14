@@ -1,7 +1,7 @@
 .movie-app-loader{
     height: 100%;
     width: 100%;
-    background-color: #fff;
+    background-image: linear-gradient(to right, #eb67f5, #3d0d5a);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,6 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: white;
 }
 
 .pulse {
