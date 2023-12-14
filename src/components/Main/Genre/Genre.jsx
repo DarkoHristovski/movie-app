@@ -29,7 +29,7 @@ if(!uniqeArr.includes(newArr[i])){
             className = "genre-div movie-card genre-card" 
           >
             <div className={`box-${i} background-image`}>
-            <p>{genre}</p>
+              <p>{genre}</p>
             </div>
           </Link>
         );

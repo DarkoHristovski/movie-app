@@ -45,58 +45,132 @@ const MovieDetails = () => {
 		setFavMovies(savedMovies);
 	};
 
+	// return (
+	// 	<>
+	// 		{movieDetails ? (
+	// 			<section className='movie-details'>
+	// 				<div className='movie-details-image'>
+	// 					<div className='movie-details-img-wrapper'>
+	// 						<img
+	// 							src={movieDetails?.fields?.image.fields.file.url}
+	// 							alt=''
+	// 						/>
+	// 					</div>
+	// 					<div className='favorite-icon'>
+	// 						<img
+	// 							src={
+	// 								isFavorite
+	// 									? '../../src/assets/fav.png'
+	// 									: '../../src/assets/add-to-favorites.png'
+	// 							}
+	// 							alt={isFavorite ? 'favorite' : 'not favorite'}
+	// 							onClick={isSaved}
+	// 						/>
+	// 					</div>
+	// 				</div>
+	// 				<div className='movie-details-content'>
+	// 					<h2 className='movie-details-title'>
+	// 						<span>Title: </span>
+	// 						{movieDetails?.fields?.title}
+	// 					</h2>
+	// 					<p className='movie-details-year'>
+	// 						<span>Year: </span>
+	// 						{movieDetails?.fields?.releasing_year}
+	// 					</p>
+	// 					<p className='movie-details-genre'>
+	// 						<span>Genre: </span>
+	// 						{movieDetails?.fields?.genre.join(' / ')}
+	// 					</p>
+	// 					<p className='movie-details-description'>
+	// 						<span>Description: </span>
+	// 						{movieDetails?.fields?.description}
+	// 					</p>
+	// 					<ul className='movies-info-list'>
+	// 						<li>
+	// 							<span>Director:</span>
+	// 						</li>
+	// 						<li>
+	// 							<span>Writers:</span>
+	// 						</li>
+	// 						<li>
+	// 							<span>Stars: </span>
+	// 							{movieDetails?.fields?.actors.join(', ')}
+	// 						</li>
+	// 					</ul>
+	// 				</div>
+	// 			</section>
+	// 		) : (
+	// 			<Loader />
+	// 		)}
+	// 	</>
+	// );
+
 	return (
 		<>
 			{movieDetails ? (
 				<section className='movie-details'>
-					<div className='movie-details-image'>
-						<div className='movie-details-img-wrapper'>
-							<img
-								src={movieDetails?.fields?.image.fields.file.url}
-								alt=''
-							/>
+					<h2 className='movie-details-title'>{movieDetails?.fields?.title}</h2>
+					<p className='movie-details-year'>
+						{movieDetails?.fields?.releasing_year}
+					</p>
+					<div className='flex-container-movie-details'>
+						<div className='movie-video-details-video-part'>
+							<div className='movie-details-image'>
+								<div className='movie-details-img-wrapper'>
+									<div className='favorite-icon'>
+										<img
+											src={
+												isFavorite
+													? '../../src/assets/fav.png'
+													: '../../src/assets/add-to-favorites.png'
+											}
+											alt={isFavorite ? 'favorite' : 'not favorite'}
+											onClick={isSaved}
+										/>
+									</div>
+									<img
+										src={movieDetails?.fields?.image.fields.file.url}
+										alt=''
+									/>
+								</div>
+							</div>
+							<div className='movie-video-traier'>
+								<iframe
+									width='560'
+									height='315'
+									src={movieDetails?.fields?.embedLink}
+									title='YouTube video player'
+									allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+									allowfullscreen
+								></iframe>
+							</div>
 						</div>
-						<div className='favorite-icon'>
-							<img
-								src={
-									isFavorite
-										? '../../src/assets/fav.png'
-										: '../../src/assets/add-to-favorites.png'
-								}
-								alt={isFavorite ? 'favorite' : 'not favorite'}
-								onClick={isSaved}
-							/>
+						<div className='movie-video-details-text-part'>
+							<div className='movie-details-content'>
+								<p className='movie-details-genre'>
+									<span>Genre: </span>
+									{movieDetails?.fields?.genre.join(' / ')}
+								</p>
+								<p className='movie-details-description'>
+									<span>Description: </span>
+									{movieDetails?.fields?.description}
+								</p>
+								<ul className='movies-info-list'>
+									<li>
+										<span>Director: </span>
+										{movieDetails?.fields?.director}
+									</li>
+									<li>
+										<span>Writers: </span>
+										{movieDetails?.fields?.writers.join(', ')}
+									</li>
+									<li>
+										<span>Stars: </span>
+										{movieDetails?.fields?.actors.join(', ')}
+									</li>
+								</ul>
+							</div>
 						</div>
-					</div>
-					<div className='movie-details-content'>
-						<h2 className='movie-details-title'>
-							<span>Title: </span>
-							{movieDetails?.fields?.title}
-						</h2>
-						<p className='movie-details-year'>
-							<span>Year: </span>
-							{movieDetails?.fields?.releasing_year}
-						</p>
-						<p className='movie-details-genre'>
-							<span>Genre: </span>
-							{movieDetails?.fields?.genre.join(' / ')}
-						</p>
-						<p className='movie-details-description'>
-							<span>Description: </span>
-							{movieDetails?.fields?.description}
-						</p>
-						<ul className='movies-info-list'>
-							<li>
-								<span>Director:</span>
-							</li>
-							<li>
-								<span>Writers:</span>
-							</li>
-							<li>
-								<span>Stars: </span>
-								{movieDetails?.fields?.actors.join(', ')}
-							</li>
-						</ul>
 					</div>
 				</section>
 			) : (
