@@ -35,7 +35,7 @@ const Header = () => {
 						<Nav className='me-4 link'>
 							<Link to='/'>Home</Link>
 							<Link to='/movies'>Movies</Link>
-							<Nav.Link href='/favorites'>Favorites</Nav.Link>
+							<Link to='/favorites'>Favorites</Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>

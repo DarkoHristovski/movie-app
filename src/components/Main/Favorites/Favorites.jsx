@@ -21,9 +21,13 @@ const Favorites = () => {
 		<div className='movie-wrapper'>
 			<div className='flex-container'>
 				{favMovies.map((movie) => (
-					<div
-						key={movie.sys.id}
+					// <div
+					// 	key={movie.sys.id}
+					// 	>
+					<Link
 						className='movie-card'
+						to={`/movies/${movie.sys.id}`}
+						key={movie.sys.id}
 					>
 						<div
 							className='favorite-rm-icon'
@@ -34,16 +38,12 @@ const Favorites = () => {
 								alt='remove from favorites'
 							/>
 						</div>
-						<Link
-							to={`/movies/${movie.sys.id}`}
-							key={movie.sys.id}
-						>
-							<img
-								src={movie.fields.image.fields.file.url}
-								alt={movie.fields.title}
-							/>
-						</Link>
-					</div>
+						<img
+							src={movie.fields.image.fields.file.url}
+							alt={movie.fields.title}
+						/>
+					</Link>
+					// </div>
 				))}
 			</div>
 		</div>
