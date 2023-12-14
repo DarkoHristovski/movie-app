@@ -327,6 +327,45 @@ body {
 	border-radius: 1rem;
 }
 
+
+/*Reactions start*/ 
+.Reactions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.Reactions img{
+	width: 50px;
+}
+
+.icons {
+	border: 1px solid rgb(42, 10, 46);
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.icons p{
+	color: white;
+	margin: 0;
+}
+
+.Reactions .icons:hover {
+	background-color:rgb(42, 10, 46);
+	
+}
+
+
+
+
+/*Reactions end*/ 
+
 @media screen and (max-width: 875px) {
 	.movie-wrapper .movie-card .movie-rating,
 	.movie-wrapper .movie-card .movie-title {
