@@ -35,7 +35,7 @@ const Favorites = () => {
 							/>
 						</div>
 						<Link
-							to={`/favorites/${movie.sys.id}`}
+							to={`/movies/${movie.sys.id}`}
 							key={movie.sys.id}
 						>
 							<img
