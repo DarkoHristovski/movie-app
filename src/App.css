@@ -44,13 +44,11 @@ ul li img {
   border-radius: 8px;
 } */
 
-main {
-	background-image: linear-gradient(to right, #000000, #2a0a3e);
+body {
+	background-image: linear-gradient(to right, #f797fe, #2a0a3e);
 }
 
 .movie-wrapper {
-	margin: auto;
-	width: 98%;
 	padding: 1rem;
 	text-align: center;
 }
@@ -231,6 +229,31 @@ main {
 	height: 2.5rem;
 	width: 2.5rem;
 	padding: 0.1rem;
+	margin: 0.5rem;
+	transition: ease-in-out 0.5s;
+}
+
+.favorite-icon:hover {
+	transform: scale(1.5);
+}
+
+.favorite-rm-icon:hover {
+	transform: scale(1.4);
+}
+
+.favorite-rm-icon {
+	position: relative;
+	height: 2.5rem;
+	width: 2.5rem;
+	object-fit: contain;
+	z-index: 10;
+	transition: ease-in-out 0.5s;
+	transform: translateX(50%);
+}
+
+.favorite-rm-icon img {
+	width: 100%;
+	height: 100%;
 }
 
 @media screen and (max-width: 875px) {
