@@ -30,7 +30,7 @@ const Movies = ({ movies }) => {
 			</div>
 			<div className='movie-wrapper'>
       <form className='search-movie'>
-          <input type="text" placeholder="Search for a movies" onChange={(e)=> setSearch(e.target.value)} />
+          <input type="text" placeholder="Search for a movies name" onChange={(e)=> setSearch(e.target.value)} />
         </form>
 				<div className='flex-container'>
 					{movies.filter((movie)=>{
