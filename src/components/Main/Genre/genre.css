@@ -1,70 +1,89 @@
-.movie-wrapper .movie-card.genre-card{
-    height:300px;
-    display: flex;
-    font-size:24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-    }
+.movie-wrapper {
+	background-image: linear-gradient(to right, #000000, #2a0a3e);
+}
+.movie-wrapper .movie-card.genre-card {
+	height: 16rem;
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: papayawhip;
+	font-size: 1.8rem;
+	text-decoration: none;
+	overflow: hidden;
+	position: relative;
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	border-radius: 1rem;
+}
 
-    .movie-wrapper .movie-card.genre-card::after{
-        background-color: rgba(0, 0, 0, .1);
-    }
+.movie-wrapper .movie-card.genre-card::after {
+	background-color: rgba(0, 0, 0, 0.1);
+}
 
-    .movie-wrapper .movie-card.genre-card p{
-       position: relative;
-       z-index: 4;
-    }
-   
+.movie-wrapper .movie-card.genre-card p {
+	position: relative;
+	z-index: 4;
+}
 
 .genre-div:hover .background-image,
-.genre-div:focus .background-image{
-    transform: scale(1.2);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+.genre-div:focus .background-image {
+	transform: scale(1.2);
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
 }
 
-
-.movie-wrapper .background-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+.movie-wrapper .background-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
 }
 .movie-wrapper .box-0 {
-    background-image: url('../../../assets/action.webp');  
+	background-image: url('../../../assets/action.webp');
 }
 .movie-wrapper .box-1 {
-    background-image: url('../../../assets/adventure.avif');  
+	background-image: url('../../../assets/adventure.avif');
 }
 .movie-wrapper .box-2 {
-    background-image: url('../../../assets/drama.jpeg');  
+	background-image: url('../../../assets/drama.jpeg');
 }
 .movie-wrapper .box-3 {
-    background-image: url('../../../assets/crime.jpeg');  
+	background-image: url('../../../assets/crime.jpeg');
 }
 .movie-wrapper .box-4 {
-    background-image: url('../../../assets/commedy.jpeg');  
+	background-image: url('../../../assets/commedy.jpeg');
 }
 .movie-wrapper .box-5 {
-    background-image: url('../../../assets/fantasy.jpeg');  
+	background-image: url('../../../assets/fantasy.jpeg');
 }
 .movie-wrapper .box-6 {
-    background-image: url('../../../assets/sci-fi.jpeg');  
+	background-image: url('../../../assets/sci-fi.jpeg');
 }
 .movie-wrapper .box-7 {
-    background-image: url('../../../assets/mistery.webp');  
+	background-image: url('../../../assets/mistery.webp');
+}
+@media screen and (max-width: 768px) {
+	.movie-wrapper .movie-card.genre-card {
+		height: 5rem;
+		display: flex;
+		font-size: 1rem;
+		display: flex;
+		text-align: baseline;
+		justify-content: center;
+		align-items: center;
+		color: papayawhip;
+		text-decoration: none;
+		border-radius: 1rem;
+		overflow: hidden;
+		position: relative;
+		-webkit-transition: 0.3s ease-in-out;
+		transition: 0.3s ease-in-out;
+		padding: 0.1rem;
+	}
 }

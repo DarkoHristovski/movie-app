@@ -1,52 +1,124 @@
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .carouselWrapper {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 .img {
-  width: 100vw;
-  height: 100%;
+	width: 100vw;
+	height: 100%;
 }
 
 .carouselWrapper img {
-  width: 100vw;
-  height: 100%;
+	width: 100vw;
+	height: 100%;
 }
 
-.carouselItem{
-  width: 100vw;
-  height: 60vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+.carouselItem {
+	width: 100vw;
+	height: 60vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: start;
+	align-items: end;
 }
 
 .carTitle {
-  color: white;
-  font-size: 3rem;
+	color: white;
+	letter-spacing: 0.15rem;
+	font-size: 2.5rem;
 }
 
-.carouselText{
-  display: flex;
-  flex-direction: column;
-  padding: 2.6rem;
-  color: white;
-}
-
-.carDescript{
-  display: none;
+.carouselText {
+	display: flex;
+	flex-direction: column;
+	padding: 2.5rem;
+	color: white;
+	backdrop-filter: blur(2px);
+	background-image: linear-gradient(to right, #0d0d0d, #00000007);
+	width: 35%;
+	height: 100%;
 }
 
 .carouselItem a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #d187ff;
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: #000000;
+	text-shadow: 0px 0px 7px whitesmoke;
+	padding: 5px;
+}
+.carouselItem a:hover {
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: #570282;
+	text-shadow: 0px 0px 5px whitesmoke;
+	padding: 5px;
+}
+
+.carousel-control-next {
+	display: none;
+}
+
+.carousel-control-prev {
+	display: none;
+}
+
+@media screen and (min-width: 626px) {
+	.carDescript {
+		display: block;
+		text-wrap: wrap;
+		margin: 0.5rem;
+		max-width: 45vw;
+	}
+}
+@media screen and (max-width: 875px) {
+	.carouselText {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 1rem 3rem 1rem;
+		color: white;
+		backdrop-filter: blur(2px);
+		background-image: linear-gradient(to right, #0d0d0d, #00000007);
+		width: 60%;
+		height: 100%;
+	}
+	.carTitle {
+		color: white;
+		letter-spacing: 0.15rem;
+		font-size: 2.5rem;
+	}
+	.carouselItem a {
+		text-decoration: none;
+		font-size: 1.2rem;
+		color: #000000;
+		text-shadow: 0px 0px 7px whitesmoke;
+		padding: 5px;
+		transition: ease-in-out 1s;
+	}
+	.carouselItem a:hover {
+		text-decoration: none;
+		font-size: 1.5rem;
+		color: #570282;
+		text-shadow: 0px 0px 5px whitesmoke;
+		padding: 5px;
+	}
+	.carDescript {
+		display: block;
+		text-wrap: wrap;
+		margin: 0.5rem 0 0.5rem 0;
+		max-width: 47vw;
+	}
+}
+@media screen and (max-width: 450px) {
+	.carouselText {
+		width: 100%;
+	}
+	.carDescript {
+		max-width: 100%;
+	}
 }
