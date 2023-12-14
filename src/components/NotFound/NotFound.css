@@ -1,0 +1,7 @@
+.not-found-section{
+    height:calc(100vh - 231px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+font-size: 50px;
+}

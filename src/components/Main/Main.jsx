@@ -1,10 +1,13 @@
-import { Route, Routes, Link } from 'react-router-dom';
-import Movies from './Home/Movies';
-import Genre from './Genre/Genre';
-import GenreFilter from './Genre/GenreFilter';
-import MovieDetails from './Home/MovieDetails';
-import Home from './Home/Home';
-import Favorites from './Favorites/Favorites';
+import { Route, Routes, Link } from "react-router-dom";
+import Movies from "./Home/Movies";
+import Genre from "./Genre/Genre";
+import Favorites from './Favorites/Favorites'
+import GenreFilter from "./Genre/GenreFilter";
+import MovieDetails from "./Home/MovieDetails";
+import Home from './Home/Home'
+import NotFound from "../NotFound/NotFound";
+
+
 
 const Main = ({ movies }) => {
 	return (
@@ -31,6 +34,7 @@ const Main = ({ movies }) => {
 					path='/genre/:genre'
 					element={<GenreFilter />}
 				/>
+         <Route path="*" element={<NotFound />} />
 			</Routes>
 		</main>
 	);

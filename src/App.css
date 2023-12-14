@@ -84,6 +84,8 @@ body {
 }
 
 .movie-wrapper {
+	margin: auto;
+	width: 100%;
 	padding: 1rem;
 	text-align: center;
 }
@@ -406,4 +408,18 @@ body {
 	.topSectMovies p {
 		margin-left: 2rem;
 	}
+}
+
+.search-movie{
+	margin: 20px;
+	width: 500px;
+	margin: auto;
+}
+
+.search-movie input{
+	width: 100%;
+	padding: 10px;
+	height: 50px;
+	border:1px solid white;
+	border-radius: 6px;
 }

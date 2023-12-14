@@ -65,6 +65,25 @@
 .movie-wrapper .box-7 {
 	background-image: url('../../../assets/mistery.webp');
 }
+.movie-wrapper .box-8 {
+	background-image: url('../../../assets/adventure.avif');
+}
+.movie-wrapper .box-9 {
+	background-image: url('../../../assets/drama.jpeg');
+}
+.movie-wrapper .box-10 {
+	background-image: url('../../../assets/crime.jpeg');
+}
+.movie-wrapper .box-11 {
+	background-image: url('../../../assets/commedy.jpeg');
+}
+.movie-wrapper .box-12 {
+	background-image: url('../../../assets/fantasy.jpeg');
+}
+.movie-wrapper .box-13 {
+	background-image: url('../../../assets/sci-fi.jpeg');
+}
+
 @media screen and (max-width: 768px) {
 	.movie-wrapper .movie-card.genre-card {
 		height: 5rem;
