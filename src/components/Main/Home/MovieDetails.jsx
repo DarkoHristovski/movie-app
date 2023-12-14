@@ -20,7 +20,6 @@ const MovieDetails = () => {
     AngryIcon: 0,
     FireIcon: 0,
     LikeIcon: 0,
-    LoveIcon: 0,
     PositIcon: 0,
   });
 
@@ -30,7 +29,6 @@ const MovieDetails = () => {
     AngryIcon: false,
     FireIcon: false,
     LikeIcon: false,
-    LoveIcon: false,
     PositIcon: false,
   });
 
