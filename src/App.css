@@ -224,6 +224,15 @@ main {
 .movies-info-list {
 	list-style: none;
 }
+
+.favorite-icon {
+	position: absolute;
+	z-index: 3;
+	height: 2.5rem;
+	width: 2.5rem;
+	padding: 0.1rem;
+}
+
 @media screen and (max-width: 875px) {
 	.movie-wrapper .movie-card .movie-rating,
 	.movie-wrapper .movie-card .movie-title {
